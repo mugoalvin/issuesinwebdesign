@@ -1,0 +1,22 @@
+/* my phone width = 423px */
+
+@media (max-width: 500px) {
+    * {
+        font-size: 15px;
+    }
+    body main{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        /* background: greenyellow; */
+    }
+    body main > * {
+        
+        background: greenyellow;
+    }
+
+    body main #side_bar{
+        width: 40%;
+    }
+}

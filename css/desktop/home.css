@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 500ms;
+}
+
+::-webkit-scrollbar{
+    width: 0.8vw;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    /* background: linear-gradient(#000, #ff0,#000); */
+    background: #FFF;
+    border-radius: 5px;
+}
+
+body {
+    background-color: var(--darkMain);
+}
+
+body header{
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding-inline: 10px;
+    border-bottom: solid 1px var(--darkBorder);
+    color: var(--darkModeText);
+    background-color: var(--darkMain);
+}
+#appName {
+    font-family: "Tangerine", "Kalam";
+    font-size: 50px;
+}
+body header div {
+    display: flex;
+    gap: 15px;
+    height: 100%;
+    align-items: center;
+}
+body header div ion-icon{
+    height: 100%;
+    width: 20px;
+    cursor: pointer;
+}
+body header div ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+body header div ul li a{
+    text-decoration: none;
+    color: var(--darkModeText);
+}
+
+
+/* Main Body */
+body main {
+    display: flex;
+    min-height: 90vh;
+}
+/* Side Bar */
+body main #side_bar{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 20%;
+    transition: 500ms;
+    background: var(--darkMain);
+    padding: 10px;
+}
+body main #side_bar #toggleBtnDiv{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 25px;
+    padding-inline-start: 10px;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+body main #side_bar #toggleBtnDiv #logoDivName{
+    color: var(--darkModeText);
+}
+body main #side_bar #toggleBtnDiv ion-icon{
+    position: absolute;
+    align-self: 50%;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+    color: var(--darkModeText);
+}
+body main #side_bar ol{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+}
+body main #side_bar ol li{
+    position: relative;
+    padding-inline: 10px;
+    padding-block-start: 10px;
+    padding-block-end: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 10px;
+    color: #fff;
+}
+.sideBarHr {
+    height: 1px;
+    border: solid 1px #5b5b5b;
+}
+body main #side_bar ol li:hover{
+    background: #5b5b5b;
+}
+body main #side_bar ol li ion-icon{
+    margin-inline: 5px 15px;
+    height: 20px;
+    width: 20px;
+}
+body main #side_bar ol li:hover ion-icon{
+    color: var(--darkBorder);
+    scale: 1.2;
+}
+body main #side_bar ol li span{
+    position: absolute;
+    top: 30%;
+    /* font-family: Kalam; */
+    font-weight: bold;
+}
+
+
+
+/* Main Content */
+body main #main_content_body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 80%;
+    padding: 20px;
+    transition: 500ms;
+    border-inline: solid 1px var(--darkBorder);
+}
+body main #main_content {    
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    width: 100%;
+}
+body main #main_content div{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    
+}
+body main #main_content div > #imgTime img:hover {
+    /* width: 110%; */
+    scale: 1.1;
+    cursor: pointer;
+}
+body main #main_content div > #imgTime{
+    position: relative;
+}
+body main #main_content div > #imgTime img{
+    width: 100%;
+    border-radius: 10px;
+}
+body main #main_content div > #imgTime p{
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    color: var(--white);
+    font-weight: 900;
+    background-color: var(--black);
+    margin: 4px;
+    padding: 2px;
+}
+body main #main_content div > #videoDetails {
+    width: 100%;
+    float: left;
+}
+body main #main_content div > #videoDetails h5{
+    font-size: 16px;
+    padding-inline: 5px;
+    width: 100%;
+    margin-block: 5px;
+    color: #707070;
+}
+body main #main_content div > #videoDetails div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 5px;
+    width: 100%;
+    color: var(--darkModeText);
+}
+
+
+/* Footer Section */
+body footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-top: solid 2px var(--darkBorder);
+    background: var(--darkMain);
+}
+body footer h2{
+    color: var(--darkModeText);
+}
+body footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    padding-block: 30px;
+}
+body footer ul li{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    /* background: green; */
+}
+body footer ul li ion-icon{
+    height: 30px;
+    width: 30px;
+    transition: 500ms;
+    color: var(--darkModeText);
+}
+body footer ul li:hover ion-icon{
+    transform: translateY(-25px);
+    transition: transform 500ms ease-out 00ms;
+}
+body footer ul li span{
+    position: absolute;
+    color: transparent;
+    bottom: -5px;
+    font-weight: 900;
+    z-index: 2;
+    transition: color 300ms ease-in;
+}
+body footer ul li:hover span{
+    color: #fff;
+    transition: color 300ms ease-in 500ms;
+}
+.footerHr {
+    transform: rotateZ(20deg);
+    height: 50px;
+}
+body footer > div {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--darkModeText);
+    padding-inline: 20px;
+}
+body footer div:first-child,
+body footer div:last-child {
+    display: flex;
+    gap: 20px;
+}
