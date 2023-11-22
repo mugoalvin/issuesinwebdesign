@@ -148,7 +148,7 @@ body main #main_content_body {
 body main #main_content {    
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
     width: 100%;
 }
